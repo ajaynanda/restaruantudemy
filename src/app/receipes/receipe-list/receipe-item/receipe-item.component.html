@@ -1,11 +1,22 @@
-<div class="col-md-12 m-5" style="width:70%;">
+<!-- <div class="recipeItem">
     <a  class="list-group-item clearfix" (click)="onSelected()">
-        <div  style="margin: auto;">
+        <div class="receipeInfo">
             <h4 class="list-group-item-heading">{{recipe.name}}</h4>
             <p class="list-group-item-text">{{recipe.description}}</p>
         </div>
-        <span style="float:right;margin-top:-55px;">
-            <img src="{{recipe.Imagepath}}" class="img-responsive" style="height: 200px;width: 200px;">
+        <span class="receipeImage">
+            <img src="{{recipe.Imagepath}}" class="img-responsive" style="height: 80px;width: 80px;">
+        </span>
+    </a>
+</div> -->
+<div class="recipeItem" >
+    <a  class="list-group-item clearfix" [routerLink]="[id]" routerLinkActive="active">
+        <div class="receipeInfo">
+            <h4 class="list-group-item-heading">{{recipe.name}}</h4>
+            <p class="list-group-item-text">{{recipe.description}}</p>
+        </div>
+        <span class="receipeImage">
+            <img src="{{recipe.Imagepath}}" class="img-responsive" style="height: 80px;width: 80px;">
         </span>
     </a>
 </div>

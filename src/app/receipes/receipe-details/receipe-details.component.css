@@ -1,0 +1,9 @@
+a{
+    text-decoration: none;
+    padding: 2px;
+    list-style: none;
+}
+ .dropdown ul li{
+    list-style:armenian;
+    color: blue;
+}

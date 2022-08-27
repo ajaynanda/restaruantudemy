@@ -1,18 +1,27 @@
 nav{
     display:flex;
 }
-a{
+.menu{
   text-decoration: none;
-  text-align: center;
-  padding: 2px;
-  margin: 5px 40px;
-  
+  padding: 1px;
+  margin: 5px 30px; 
+  justify-content: space-between;
   cursor: pointer;
 }
 li{
     list-style: none;
 }
 .dropdown{
-   margin-left: auto;
-   margin-right: 5px;
+  display: block;
+   margin:auto 0px;
+}
+.dropdown-menu{
+  text-decoration: none;
+}
+.dropdown-toggle{
+  text-decoration: none;
+}
+.active{
+  background-color: antiquewhite;
+  padding: 18px;
 }

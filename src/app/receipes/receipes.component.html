@@ -1,13 +1,14 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-5">
-            <app-receipe-list (recipeWasSelected)="OnSelectedRecipe($event)"></app-receipe-list>
+            <app-receipe-list></app-receipe-list>
         </div>
         <div class="col-md-7">
-            <app-receipe-details *ngIf="OnSelectedRecipes" [recipeData]="Recipe"></app-receipe-details>
-            <div style="margin-top:150px" *ngIf="!OnSelectedRecipes">
+            <!-- <app-receipe-details *ngIf="OnSelectedRecipes" [recipeData]="Recipe"></app-receipe-details> -->
+            <!-- <div style="margin-top:150px" *ngIf="!OnSelectedRecipes">
                 <h4>Please select a Recipe to load</h4>
-            </div>
+            </div> -->
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>

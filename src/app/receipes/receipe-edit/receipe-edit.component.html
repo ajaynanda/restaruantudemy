@@ -1,0 +1,47 @@
+<h3>Edit Reciepe</h3>
+<form [formGroup]="receipeForm" (ngSubmit)="submit(receipeForm.value)">
+    <div class="row">
+        <div class="col-md-1">
+            <button [disabled]="receipeForm.invalid" type="submit" class="btn btn-success btn-sm">Save</button>
+        </div>
+        <div class="col-md-1">
+            <button type="button" (click)="cancel()" class="btn btn-danger btn-sm">Cancel</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <label>Name</label>
+            <input name="name" class="form-control" formControlName="name">
+        </div>
+        <div class="col-md-8">
+            <label>Image URL</label>
+            <input name="Imagepath" class="form-control m-2" #Imagepath formControlName="Imagepath">
+            <img [src]="Imagepath.value" class="img-responsive" >
+        </div>
+        <div class="col-md-8">
+            <label>Description</label>
+            <textarea *ngIf="editmode"  type="text" class="form-control" rows="5"  formControlName="description">
+                {{data.description}}
+            </textarea>    
+            <textarea *ngIf="!editmode"  type="text" class="form-control" rows="5"  formControlName="description">
+               
+            </textarea>    
+        </div>
+    </div><br>
+    <h3>Ingredients</h3>
+    <div formArrayName="ingredients">
+    <div class="row p-2" *ngFor="let ingredients of receipeForm.get('ingredients').controls;let i =index" [formGroupName]="i"><br>
+        <div class="col-md-4">
+            <input type="text" class="form-control" formControlName="name">
+        </div>
+        <div class="col-md-2">
+            <input type="number" class="form-control" formControlName="amount">
+        </div>
+        <div class="col-md-3">
+            <button type="button" (click)="close(i)" class="btn btn-danger btn-sm">X</button>
+        </div>
+    </div>
+    <hr>
+    <button type="button" class="btn btn-success btn-sm" (click)="addingre()" >Add Ingredients</button>
+</div>
+</form>

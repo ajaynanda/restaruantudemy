@@ -1,13 +1,14 @@
 <div class="container">
     <div class="row">
         <div style="margin-top:20px;" class="col-xs-12">
-            <button class="btn btn-primary">New Recipe</button>
+            <button class="btn btn-primary btn-sm" (click)="onNew()">New Recipe</button>
         </div>
     </div>
     <hr>
 </div>
 <div class="row">
  <div class="col-md-12">
-     <app-receipe-item *ngFor="let recipes of recipe" [recipe]="recipes" (recipeSelected)="selected(recipes)"> </app-receipe-item>
+     <!-- <app-receipe-item *ngFor="let recipes of recipe ; let i=index" [recipe]="recipes" [id]="i"> </app-receipe-item> -->
+     <app-receipe-item *ngFor="let recipes of recipe ;let i=index " [recipe]="recipes" [id]="i"> </app-receipe-item>
  </div>
 </div>

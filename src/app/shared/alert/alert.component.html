@@ -1,0 +1,10 @@
+<div class="row" *ngIf="message">
+    <div class="col-md-6">
+        <div class="alert-box">
+            <div class="alert-box-actions">
+                <p>{{message}}</p>
+                <button class="btn btn-danger btn-sm" (click)="message=''">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

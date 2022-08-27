@@ -1,0 +1,15 @@
+.alert-box{
+   position:fixed;
+   top:15vw;
+   left:30vw;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   width: 40vw;
+   height: 10vw;
+   z-index: 50;
+}
+button{
+    float: right;
+    position:relative;
+    top: 80px;
+    right: 10px;
+}

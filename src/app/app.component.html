@@ -1,7 +1,11 @@
-<app-header (loadedfeature)="onNavigate($event)"></app-header>
-<app-receipes *ngIf="fetaureLoaded === 'recipe'"></app-receipes>
+<!-- <app-header (loadedfeature)="onNavigate($event)"></app-header> -->
+<app-header></app-header>
+<!-- <app-receipes *ngIf="fetaureLoaded === 'recipe'"></app-receipes> -->
+<!-- <app-receipes></app-receipes> -->
 <div class="row">
-    <div class="col-md-7">
-        <app-shopping-list *ngIf="fetaureLoaded != 'recipe'"></app-shopping-list>
+    <div class="col-md-12 m-auto" >
+        <router-outlet></router-outlet>
+        <!-- <app-shopping-list *ngIf="fetaureLoaded != 'recipe'"></app-shopping-list> -->
+        <!-- <app-shopping-list></app-shopping-list> -->
     </div>
 </div>
